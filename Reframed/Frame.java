@@ -1,52 +1,52 @@
 public class Frame {
     private String styleName;
-    private float halfInchWidthPrice;
-    private float oneInchWidthPrice;
-    private float oneAndAHalfInchWidthPrice;
-    private float twoInchWidthPrice;
+    private float halfInchWidthPricePerInch;
+    private float oneInchWidthPricePerInch;
+    private float oneAndAHalfInchWidthPricePerInch;
+    private float twoInchWidthPricePerInch;
 
     public Frame(
         String styleName,
-        float halfInchWidthPrice,
-        float oneInchWidthPrice,
-        float oneAndAHalfInchWidthPrice,
-        float twoInchWidthPrice
+        float halfInchWidthPricePerInch,
+        float oneInchWidthPricePerInch,
+        float oneAndAHalfInchWidthPricePerInch,
+        float twoInchWidthPricePerInch
     ) {
         this.styleName = styleName;
-        this.halfInchWidthPrice = halfInchWidthPrice;
-        this.oneInchWidthPrice = oneInchWidthPrice;
-        this.oneAndAHalfInchWidthPrice = oneAndAHalfInchWidthPrice;
-        this.twoInchWidthPrice = twoInchWidthPrice;
+        this.halfInchWidthPricePerInch = halfInchWidthPricePerInch;
+        this.oneInchWidthPricePerInch = oneInchWidthPricePerInch;
+        this.oneAndAHalfInchWidthPricePerInch = oneAndAHalfInchWidthPricePerInch;
+        this.twoInchWidthPricePerInch = twoInchWidthPricePerInch;
     }
 
     public String getStyleName() {
         return styleName;
     }
 
-    public float getHalfInchWidthPrice() {
-        return halfInchWidthPrice;
+    public float getHalfInchWidthPricePerInch() {
+        return halfInchWidthPricePerInch;
     }
 
-    public float getOneInchWidthPrice() {
-        return oneInchWidthPrice;
+    public float getOneInchWidthPricePerInch() {
+        return oneInchWidthPricePerInch;
     }
 
-    public float getOneAndAHalfInchWidthPrice() {
-        return oneAndAHalfInchWidthPrice;
+    public float getOneAndAHalfInchWidthPricePerInch() {
+        return oneAndAHalfInchWidthPricePerInch;
     }
 
-    public float getTwoInchWidthPrice() {
-        return twoInchWidthPrice;
+    public float getTwoInchWidthPricePerInch() {
+        return twoInchWidthPricePerInch;
     }
 
     public String toString() {
         StringBuilder builder = new StringBuilder();
 
         builder.append(styleName + ", ");
-        builder.append(halfInchWidthPrice + ", ");
-        builder.append(oneInchWidthPrice + ", ");
-        builder.append(oneAndAHalfInchWidthPrice + ", ");
-        builder.append(twoInchWidthPrice);
+        builder.append(halfInchWidthPricePerInch + ", ");
+        builder.append(oneInchWidthPricePerInch + ", ");
+        builder.append(oneAndAHalfInchWidthPricePerInch + ", ");
+        builder.append(twoInchWidthPricePerInch);
 
         return builder.toString();
     }
