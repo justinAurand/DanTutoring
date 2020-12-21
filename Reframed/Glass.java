@@ -1,13 +1,13 @@
 public class Glass {
-    private String type;
+    private GlassType type;
     private float pricePerSquareInch;
 
-    public Glass(String type, float pricePerSquareInch) {
+    public Glass(GlassType type, float pricePerSquareInch) {
         this.type = type;
         this.pricePerSquareInch = pricePerSquareInch;
     }
 
-    public String getType() {
+    public GlassType getType() {
         return type;
     }
 
@@ -18,7 +18,7 @@ public class Glass {
     public String toString() {
         StringBuilder builder = new StringBuilder();
 
-        builder.append(type + ", ");
+        builder.append(type.name() + ", ");
         builder.append(pricePerSquareInch);
 
         return builder.toString();

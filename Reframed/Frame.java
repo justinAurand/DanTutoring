@@ -1,26 +1,26 @@
 public class Frame {
-    private String styleName;
+    private FrameStyle style;
     private float halfInchWidthPricePerInch;
     private float oneInchWidthPricePerInch;
     private float oneAndAHalfInchWidthPricePerInch;
     private float twoInchWidthPricePerInch;
 
     public Frame(
-        String styleName,
+        FrameStyle style,
         float halfInchWidthPricePerInch,
         float oneInchWidthPricePerInch,
         float oneAndAHalfInchWidthPricePerInch,
         float twoInchWidthPricePerInch
     ) {
-        this.styleName = styleName;
+        this.style = style;
         this.halfInchWidthPricePerInch = halfInchWidthPricePerInch;
         this.oneInchWidthPricePerInch = oneInchWidthPricePerInch;
         this.oneAndAHalfInchWidthPricePerInch = oneAndAHalfInchWidthPricePerInch;
         this.twoInchWidthPricePerInch = twoInchWidthPricePerInch;
     }
 
-    public String getStyleName() {
-        return styleName;
+    public FrameStyle getStyle() {
+        return style;
     }
 
     public float getHalfInchWidthPricePerInch() {
@@ -42,7 +42,7 @@ public class Frame {
     public String toString() {
         StringBuilder builder = new StringBuilder();
 
-        builder.append(styleName + ", ");
+        builder.append(style.name() + ", ");
         builder.append(halfInchWidthPricePerInch + ", ");
         builder.append(oneInchWidthPricePerInch + ", ");
         builder.append(oneAndAHalfInchWidthPricePerInch + ", ");
