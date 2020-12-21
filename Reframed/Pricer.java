@@ -14,6 +14,12 @@ public class Pricer {
     ) {
         Frame frame = frameService.getByStyle(frameStyle);
         Glass glass = glassService.getByType(glassType);
-        return 0.0f;
+
+        float framePricePerInch = frameService.getPricePerInch(frame, frameWidth);
+        float framePrice = (unitHeight * 2 + unitWidth * 2) * framePricePerInch;
+        float glassPrice = unitHeight * unitWidth * glass.getPricePerSquareInch();
+        float price = framePrice + glassPrice + assemblyCost;
+
+        return price;
     }
 }

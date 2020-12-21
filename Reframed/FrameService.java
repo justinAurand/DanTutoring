@@ -27,4 +27,21 @@ public class FrameService {
 
         return null;
     }
+
+    public float getPricePerInch(Frame frame, FrameWidth frameWidth) {
+        if (frameWidth.equals(FrameWidth.HalfInch)) {
+            return frame.getHalfInchWidthPricePerInch();
+        }
+        if (frameWidth.equals(FrameWidth.OneInch)) {
+            return frame.getOneInchWidthPricePerInch();
+        }
+        if (frameWidth.equals(FrameWidth.OneAndAHalfInches)) {
+            return frame.getOneAndAHalfInchWidthPricePerInch();
+        }
+        if (frameWidth.equals(FrameWidth.TwoInches)) {
+            return frame.getTwoInchWidthPricePerInch();
+        }
+
+        return 0.0f;
+    }
 }
