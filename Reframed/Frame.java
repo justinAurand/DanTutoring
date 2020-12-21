@@ -1,9 +1,9 @@
 public class Frame {
-    public String styleName;
-    public float halfInchWidthPrice;
-    public float oneInchWidthPrice;
-    public float oneAndAHalfInchWidthPrice;
-    public float twoInchWidthPrice;
+    private String styleName;
+    private float halfInchWidthPrice;
+    private float oneInchWidthPrice;
+    private float oneAndAHalfInchWidthPrice;
+    private float twoInchWidthPrice;
 
     public Frame(
         String styleName,
@@ -17,6 +17,26 @@ public class Frame {
         this.oneInchWidthPrice = oneInchWidthPrice;
         this.oneAndAHalfInchWidthPrice = oneAndAHalfInchWidthPrice;
         this.twoInchWidthPrice = twoInchWidthPrice;
+    }
+
+    public String getStyleName() {
+        return styleName;
+    }
+
+    public float getHalfInchWidthPrice() {
+        return halfInchWidthPrice;
+    }
+
+    public float getOneInchWidthPrice() {
+        return oneInchWidthPrice;
+    }
+
+    public float getOneAndAHalfInchWidthPrice() {
+        return oneAndAHalfInchWidthPrice;
+    }
+
+    public float getTwoInchWidthPrice() {
+        return twoInchWidthPrice;
     }
 
     public String toString() {
