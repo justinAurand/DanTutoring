@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class Pricer {
+public class Price {
     private float assemblyCost = 10.00f;
     private FrameService frameService = new FrameService();
     private GlassService glassService = new GlassService();
 
-    public float determinePrice (
+    public float determine(
         float unitHeight,
         float unitWidth,
         FrameStyle frameStyle,

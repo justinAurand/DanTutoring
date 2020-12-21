@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String args[]) {
         // UI supplied values
-        float height = 12;
-        float width = 24;
+        float height = 36;
+        float width = 72;
         UnitOfMeasurement unitOfMeasurement = UnitOfMeasurement.Centimeters;
         FrameStyle style = FrameStyle.Classic;
         FrameWidth frameWidth = FrameWidth.HalfInch;
@@ -14,7 +14,7 @@ public class Main {
         height = measurementService.standardize(height, unitOfMeasurement);
         width = measurementService.standardize(width, unitOfMeasurement);
 
-        float price = new Pricer().determinePrice(height, width, style, frameWidth, glassType);
+        float price = new Price().determine(height, width, style, frameWidth, glassType);
         System.out.printf("%.2f", price);
     }
 }
