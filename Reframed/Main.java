@@ -2,14 +2,19 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String args[]) {
-        float price = new Pricer().determinePrice(
-            10,
-            10,
-            FrameStyle.Classic,
-            FrameWidth.OneAndAHalfInches,
-            GlassType.Antiglare
-        );
+        // UI supplied values
+        float height = 12;
+        float width = 24;
+        UnitOfMeasurement unitOfMeasurement = UnitOfMeasurement.Centimeters;
+        FrameStyle style = FrameStyle.Classic;
+        FrameWidth frameWidth = FrameWidth.HalfInch;
+        GlassType glassType = GlassType.Antiglare;
 
-        System.out.println(price);
+        MeasurementService measurementService = new MeasurementService();
+        height = measurementService.standardize(height, unitOfMeasurement);
+        width = measurementService.standardize(width, unitOfMeasurement);
+
+        float price = new Pricer().determinePrice(height, width, style, frameWidth, glassType);
+        System.out.printf("%.2f", price);
     }
 }
