@@ -1,25 +1,28 @@
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-public class TheFrame extends JFrame {
-    public TheFrame() {
-        JPanel heightPanel = getHeightPanel();
-        JPanel lengthPanel = getLengthPanel();
-        JPanel unitOfMeasurementPanel = getUnitOfMeasurementPanel();
-        JPanel widthAndStylePanel = getWidthAndStylePanel();
-        JPanel glassTypePanel = getGlassTypePanel();
+public class Frame extends JFrame {
+    public Frame() {
+        ArrayList<JPanel> panels = new ArrayList<JPanel>() {
+            {
+                add(getHeightPanel());
+                add(getLengthPanel());
+                add(getUnitOfMeasurementPanel());
+                add(getWidthAndStylePanel());
+                add(getGlassTypePanel());
+            }
+        };
 
         setLayout(new FlowLayout());
-        add(heightPanel);
-        add(lengthPanel);
-        add(unitOfMeasurementPanel);
-        add(widthAndStylePanel);
-        add(glassTypePanel);
+        for (int i = 0; i < panels.size(); i++) {
+            add(panels.get(i));
+        }
         setSize(400, 400);
     }
 
