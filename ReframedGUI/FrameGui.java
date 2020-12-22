@@ -1,25 +1,10 @@
-import java.awt.*;
-import javax.swing.*;
+import javax.swing.JFrame;
 
 public class FrameGui {
     public static void main(String args[]) {
-        FrameGui frameGui = new FrameGui();
-    }
-
-    public FrameGui() {
-        JFrame frame = getFrame();
-        // remote.add(getPowerAndInputPanel(), BorderLayout.NORTH);
-        // remote.add(getChannelAndVolumePanel(), BorderLayout.CENTER);
-        // remote.add(getDirectionPanel(), BorderLayout.SOUTH);
-        frame.setVisible(true);
-    }
-
-    private JFrame getFrame() {
-        JFrame frame = new JFrame();
-        frame.setTitle("Frame");
-        frame.setSize(600, 600);
-        frame.setLocation(200, 100);
+        JFrame frame = new TheFrame();
+        frame.setTitle("The Frame");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        return frame;
+        frame.setVisible(true);
     }
 }
