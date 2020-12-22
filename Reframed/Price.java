@@ -7,7 +7,7 @@ public class Price {
 
     public float determine(
         float unitHeight,
-        float unitWidth,
+        float unitLength,
         FrameStyle frameStyle,
         FrameWidth frameWidth,
         GlassType glassType
@@ -16,8 +16,8 @@ public class Price {
         Glass glass = glassService.getByType(glassType);
 
         float framePricePerInch = frameService.getPricePerInch(frame, frameWidth);
-        float framePrice = (unitHeight * 2 + unitWidth * 2) * framePricePerInch;
-        float glassPrice = unitHeight * unitWidth * glass.getPricePerSquareInch();
+        float framePrice = (unitHeight * 2 + unitLength * 2) * framePricePerInch;
+        float glassPrice = unitHeight * unitLength * glass.getPricePerSquareInch();
         float price = framePrice + glassPrice + assemblyCost;
 
         return price;
